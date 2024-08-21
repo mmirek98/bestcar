@@ -1,0 +1,47 @@
+footer {
+  padding: 6vh 0;
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/src/assets/img/audi_footer.jpg');
+  background-position-y: 50%;
+  background-size: cover;
+  /* TODO: check this later */
+  /* box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2); */
+}
+
+.bc-footer-contact-row p > span {
+  display: block;
+}
+
+.bc-footer-card-header {
+  text-align: center;
+  padding: 1vh 1vw;
+  background-color: #990100;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: -2vh;
+  -webkit-box-shadow: 8px 8px 14px -6px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 8px 14px -6px rgba(66, 68, 90, 1);
+  box-shadow: 8px 8px 14px -6px rgba(66, 68, 90, 1);
+}
+
+.bc-footer-card-header .card-subtitle {
+  font-size: 14px;
+}
+
+.bc-footer-subtitle {
+  font-size: 18px;
+}
+
+.bc-footer-text {
+  font-size: 14px;
+}
+
+.bc-footer-form,
+.bc-footer-form input::placeholder,
+.bc-footer-form textarea::placeholder {
+  font-size: 12px;
+}
+
+footer .form-group {
+  padding-bottom: 1vh;
+}
