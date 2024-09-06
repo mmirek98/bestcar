@@ -34,6 +34,10 @@ nav .nav_content .logo a {
   color: white;
 }
 
+nav .nav_content .logo a:hover {
+  text-shadow: #FC0 1px 0 10px;
+}
+
 nav.sticky .nav_content .logo a {
   color: rgb(85, 85, 85);
   animation: animateLinksColor ease .5s normal;
@@ -108,11 +112,10 @@ nav.sticky {
 
 /* TODO: extract to another file */
 #home {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)), url('/src/assets/img/mustang.jpg');
   background-size: cover;
-  background-position: center;
 }
 
 .content {
