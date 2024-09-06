@@ -16,9 +16,6 @@ nav {
   padding: 20px;
 }
 
-nav.sticky {
-  background-color: #133337;
-}
 
 nav .nav_content {
   height: 100%;
@@ -36,6 +33,11 @@ nav .nav_content .logo a {
   color: white;
 }
 
+nav.sticky .nav_content .logo a {
+  color: rgb(85, 85, 85);
+  animation: animateLinksColor ease .5s normal;
+}
+
 nav .nav_content .nav_links {
   display: flex;
   align-items: center;
@@ -43,20 +45,62 @@ nav .nav_content .nav_links {
 
 nav .nav_links li {
   list-style: none;
-  margin: 0 1vw;
+  margin: 0;
+  padding: .6vh .6vw;
 }
 
 nav .nav_links a {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   color: #fff;
-  background: red;
   padding: 10px 15px;
   transition: all 0.3s ease;
+  text-transform: uppercase;
 }
 
+nav.sticky .nav_links a {
+  animation: animateLinksColor ease .5s normal;
+  color: rgb(85, 85, 85);
+}
+
+@keyframes animateLinksColor {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: rgb(85, 85, 85);
+  }
+}
+
+
 nav .nav_links a:hover {
-  color: #979fa0;
+  color: #fff;
+  text-shadow: #FC0 1px 0 10px;
+  background-color: #ffffff0f;
+  opacity: 1;
+  transition: .25s ease-in-out;
+}
+
+nav.sticky .nav_links a:hover {
+  color: rgb(85, 85, 85);
+  text-shadow: none;
+  background-color: #cdcdcd;
+  transition: .25s ease-in-out;
+}
+
+nav.sticky {
+  animation: animateNavbarSticky ease .5s normal;
+  background-color: #fff;
+}
+
+@keyframes animateNavbarSticky {
+  0% {
+    background-color: transparent;
+
+  }
+  100% {
+    background-color: #fff;
+  }
 }
 
 
