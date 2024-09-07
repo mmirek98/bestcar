@@ -1,7 +1,8 @@
 header {
+  display: flex;
   padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header a {
@@ -43,7 +44,7 @@ nav.sticky .nav_content .logo a {
   animation: animateLinksColor ease .5s normal;
 }
 
-nav .nav_content .nav_links {
+.nav_links {
   display: flex;
   align-items: center;
 }
@@ -61,6 +62,7 @@ nav .nav_links a {
   padding: 10px 15px;
   transition: all 0.3s ease;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 nav.sticky .nav_links a {
@@ -72,6 +74,7 @@ nav.sticky .nav_links a {
   0% {
     color: #fff;
   }
+
   100% {
     color: rgb(85, 85, 85);
   }
@@ -98,11 +101,113 @@ nav.sticky {
   background-color: #fff;
 }
 
+.hamburger_menu {
+  position: relative;
+}
+
+.close-hamburger {
+  width: 40px;
+  height: 25px;
+  padding: 2vh 2vw 2vh 12vw;
+  right: 1vw;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .hamburger_menu {
+    width: 40px;
+    height: 25px;
+    background: #333;
+    border-radius: 3px;
+    padding: 2vh 2vw;
+  }
+
+  .hamburger_menu::before,
+  .hamburger_menu::after {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    background-color: #fff;
+    transition: transform 0.2s ease, top 0.2s ease;
+    transform: rotate(0deg) translateY(-50%);
+    z-index: 1000;
+  }
+
+  .hamburger_menu::before {
+    top: 30%;
+  }
+
+  .hamburger_menu::after {
+    top: 70%;
+  }
+
+  .hamburger_menu:focus::before,
+  .hamburger_menu:focus-within::before {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+  }
+
+  .hamburger_menu:focus::after,
+  .hamburger_menu:focus-within::after {
+    top: 50%;
+    transform: rotate(-30deg) translateY(-50%);
+  }
+
+  .hamburger_menu:focus+.close-hamburger {
+    display: inline-block !important;
+  }
+
+  .hamburger_menu ul {
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+    border-radius: 3px;
+    padding: 5px 0;
+    box-shadow: 0 0 10px #222;
+    display: none;
+
+    width: 101vw;
+    height: 100vh;
+    right: -50%;
+    top: -49px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(17, 17, 17, .9);
+  }
+
+  .hamburger_menu ul li {
+    margin: 2vh 0;
+  }
+
+  .hamburger_menu ul li a {
+    display: block;
+    text-align: center;
+    min-width: 300px;
+    font-size: 3vw;
+    width: 50vw;
+    color: #fff !important;
+  }
+
+  .hamburger_menu:focus ul,
+  .hamburger_menu:focus-within ul {
+    display: flex;
+  }
+}
+
 @keyframes animateNavbarSticky {
   0% {
     background-color: transparent;
 
   }
+
   100% {
     background-color: #fff;
   }
