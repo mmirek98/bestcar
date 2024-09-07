@@ -15,6 +15,7 @@ nav {
   top: 0;
   width: 100%;
   padding: 20px;
+  z-index: 1;
 }
 
 
@@ -112,9 +113,9 @@ nav.sticky {
   right: 1vw;
   display: none;
   position: fixed;
-  z-index: 1000;
   background: transparent;
   border: none;
+  z-index: 3;
 }
 
 @media screen and (max-width: 1200px) {
@@ -124,6 +125,7 @@ nav.sticky {
     background: #333;
     border-radius: 3px;
     padding: 2vh 2vw;
+    cursor: pointer;
   }
 
   .hamburger_menu::before,
@@ -138,15 +140,16 @@ nav.sticky {
     background-color: #fff;
     transition: transform 0.2s ease, top 0.2s ease;
     transform: rotate(0deg) translateY(-50%);
-    z-index: 1000;
   }
 
   .hamburger_menu::before {
     top: 30%;
+    z-index: 1;
   }
 
   .hamburger_menu::after {
     top: 70%;
+    z-index: 1;
   }
 
   .hamburger_menu:focus::before,
@@ -168,7 +171,6 @@ nav.sticky {
   .hamburger_menu ul {
     position: absolute;
     flex-direction: column;
-    z-index: 1;
     border-radius: 3px;
     padding: 5px 0;
     box-shadow: 0 0 10px #222;

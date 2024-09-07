@@ -33,6 +33,45 @@ body {
   padding: 1vh 2vw;
 }
 
+.bc-card {
+  margin: 0 auto;
+  text-align: center;
+  width: 95%;
+  padding: 2vh 2vw;
+  color: rgb(153, 153, 153);
+  margin-top: 24vh;
+  margin-bottom: 4vh;
+}
+
+.bc-card-header {
+  background-color: #fff;
+  padding-bottom: 2vh;
+}
+
+.bc-card-title {
+  font-size: 36px;
+  padding-bottom: 4vh;
+  color: rgb(30, 30, 30);
+}
+
+.bc-card-subtitle {
+  font-size: 18px;
+}
+
+.bc-card-body {
+  padding-top: 4vh;
+}
+
+.bc-icon {
+  font-size: 60px;
+  padding-bottom: 2vh;
+}
+
+.bc-subheader {
+  color: rgb(30, 30, 30);
+  font-size: 20px;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -62,6 +101,11 @@ body {
   .welcome_button {
     font-size: 16px;
   }
+
+  .bc-card {
+    width: 90%;
+    padding: 3vh 4vw;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -82,5 +126,10 @@ body {
 
   .welcome_button {
     font-size: 20px;
+  }
+
+  .bc-card {
+    width: 80%;
+    padding: 4vh 12vw;
   }
 }

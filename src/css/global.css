@@ -6,10 +6,29 @@
   font-style: normal;
 }
 
-body {
+html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: linear-gradient(to right, #080C0D, #292724);
 }
 
 .content {
   margin-top: 200px;
+}
+
+.bc-company-font {
+  font-family: 'american_kestrel_laserregular';
+  text-wrap: nowrap;
+}
+
+/* BC COLORS */
+.bc-blue {
+  color: rgb(63, 131, 191);
+}
+
+.bc-green {
+  color: rgb(149, 214, 102);
+}
+
+.bc-green-dark {
+  color: rgb(76, 175, 80);
 }
