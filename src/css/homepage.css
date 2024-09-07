@@ -1,0 +1,86 @@
+body {
+  height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)), url('/src/assets/img/mustang.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.welcome {
+  display: flex;
+  margin: 36vh auto 12vh;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+}
+
+.welcome_title {
+  font-weight: bold;
+  margin: 0 0 2vh;
+  font-size: 24px;
+}
+
+.welcome_text {
+  margin-bottom: 2vh;
+  font-size: 12px;
+}
+
+.welcome_button {
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 1vh 2vw;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .welcome_title {
+    font-size: 30px;
+  }
+
+  .welcome_text {
+    font-size: 14px;
+  }
+
+  .welcome_button {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .welcome_title {
+    font-size: 36px;
+  }
+
+  .welcome_text {
+    font-size: 16px;
+  }
+
+  .welcome_button {
+    font-size: 16px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .welcome_title {
+    font-size: 48px;
+  }
+
+  .welcome_text {
+    font-size: 20px;
+  }
+
+  .welcome_button {
+    font-size: 20px;
+  }
+}

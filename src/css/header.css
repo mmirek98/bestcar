@@ -212,21 +212,3 @@ nav.sticky {
     background-color: #fff;
   }
 }
-
-
-
-/* TODO: extract to another file */
-#home {
-  height: 90vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)), url('/src/assets/img/mustang.jpg');
-  background-size: cover;
-}
-
-.content {
-  max-width: 1440px;
-  margin: auto;
-  text-align: justify;
-  padding: 3rem 0;
-  line-height: 1.8rem;
-}
