@@ -15,7 +15,7 @@ nav {
   top: 0;
   width: 100%;
   padding: 20px;
-  z-index: 1;
+  z-index: 2;
 }
 
 
@@ -100,6 +100,7 @@ nav.sticky .nav_links a:hover {
 nav.sticky {
   animation: animateNavbarSticky ease .5s normal;
   background-color: #fff;
+  border-bottom: 1px solid #000;
 }
 
 .hamburger_menu {
@@ -115,7 +116,7 @@ nav.sticky {
   position: fixed;
   background: transparent;
   border: none;
-  z-index: 3;
+  z-index: 4;
 }
 
 @media screen and (max-width: 1200px) {
@@ -144,12 +145,12 @@ nav.sticky {
 
   .hamburger_menu::before {
     top: 30%;
-    z-index: 1;
+    z-index: 2;
   }
 
   .hamburger_menu::after {
     top: 70%;
-    z-index: 1;
+    z-index: 2;
   }
 
   .hamburger_menu:focus::before,
