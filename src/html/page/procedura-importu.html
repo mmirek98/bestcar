@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strona główna - BEST CAR</title>
+  <title>Procedura importu - BEST CAR</title>
 
   <!-- Bootstrap v5.3.3 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,31 +18,32 @@
 
   <!-- smtpjs -->
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script src="src/js/contactForm.js"></script>
+  <script src="../../js/contactForm.js"></script>
 
   <!-- Styles -->
-  <link href="src/css/bs-colors-override.css" rel="stylesheet">
-  <link href="src/css/global.css" rel="stylesheet">
-  <link href="src/css/footer.css" rel="stylesheet">
-  <link href="src/css/header.css" rel="stylesheet">
-  <link href="src/css/homepage.css" rel="stylesheet">
+  <link href="../../css/bs-colors-override.css" rel="stylesheet">
+  <link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/footer.css" rel="stylesheet">
+  <link href="../../css/header.css" rel="stylesheet">
+  <link href="../../css/procedura-importu.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav class="sticky">
       <div class="nav_content">
         <div class="logo">
-          <a aria-current="page" href="">
-            <img src="src/assets/icon/icon512w.png" alt="BEST CAR" width="100" height="100" />Best car
+          <a href="../../../index.html">
+            <img src="../../assets/icon/icon512w.png" alt="BEST CAR" width="100" height="100" />Best car
           </a>
         </div>
         <div tabindex="0" class="hamburger_menu">
           <ul role="menubar" aria-haspopup="true" class="nav_links">
-            <li role="menuitem"><a href="src/html/page/procedura-importu.html">Procedura importu</a></li>
-            <li role="menuitem"><a href="src/html/page/jak-szukac-pojazdu">Jak szukać pojazdu</a></li>
-            <li role="menuitem"><a href="src/html/page/koszty-importu">Koszty importu</a></li>
-            <li role="menuitem"><a href="src/html/page/faq">FAQ</a></li>
+            <li aria-current="page" role="menuitem"><a href="./procedura-importu.html">Procedura importu</a>
+            </li>
+            <li role="menuitem"><a href="./jak-szukac-pojazdu">Jak szukać pojazdu</a></li>
+            <li role="menuitem"><a href="./koszty-importu">Koszty importu</a></li>
+            <li role="menuitem"><a href="./faq">FAQ</a></li>
             <li role="menuitem"><a href="#contact">Kontakt</a></li>
           </ul>
         </div>
@@ -65,47 +66,60 @@
 
 
   <div class="content">
-    <div class="welcome">
-      <h1 class="welcome_title">Import samochodów z USA</h1>
-      <span class="welcome_text">Spełnimy Twoje motoryzacyjne marzenia dzięki naszemu bogatemu doświadczeniu,
-        bezpośredniemu importowi,
-        konkurencyjnym cenom i pełnemu profesjonalizmowi.</span>
-      <a href="#contact" class="btn btn-primary welcome_button">Skontaktuj się w sprawie zakupu</a>
-    </div>
+    <section class="bc-import-procedure">
+      <h1>Procedura importu</h1>
 
-    <div class="card bc-card">
-      <div class="card-header bc-card-header">
-        <h4 class="card-title bc-card-title">Dlaczego <span class="bc-company-font">Best car</span>&nbsp;?</h4>
-        <h5 class="card-subtitle bc-card-subtitle">Od długiego czasu zajmujemy się importem samochodów z USA. Nasza
-          wieloletnia
-          współpraca z firmami wysyłkowymi ze Stanów Zjednoczonych gwarantuje naszym klientom szybki i bezpieczny
-          transport wymarzonego samochodu do Polski.</h5>
-      </div>
-      <div class="card-body bc-card-body">
+      <div class="bc-import-stepper mt-4">
+        <h3 class="my-4">Proces importu składa się z trzech, prostych kroków:</h3>
         <div class="row">
-          <div class="col-md-12 col-xl-4">
-            <i class="fab fa-weixin bc-icon bc-blue" aria-disabled="true"></i>
-            <h6 class="bc-subheader">Łatwy kontakt</h6>
-            <p>Nasza firma wyróżnia się indywidualnym podejściem do każdego klienta, dbając o to, aby proces importu
-              samochodu był dla naszych klientów jak najbardziej przejrzysty i komfortowy. Staramy się na bieżąco
-              informować naszych klientów o wszystkich etapach realizacji zlecenia, od momentu złożenia zamówienia, aż
-              po dostarczenie pojazdu.</p>
+          <div class="col-12 col-lg-4 bc-import-step my-4">
+            <img src="../../assets/img/cars.jpg" />
+            <h4 class="mt-4 mb-2">Wybór samochodu</h4>
+            <p>Pierwszym krokiem jest dokonanie wyboru samochodu, korzystając z <a
+                href="jak-szukac-pojazdu">wyszukiwarek samochodów na portalach aukcyjnych.</a></p>
           </div>
-          <div class="col-md-12 col-xl-4">
-            <i class="fas fa-check bc-icon bc-green" aria-disabled="true"></i>
-            <h6 class="bc-subheader">Prostota</h6>
-            <p>Staramy się maksymalnie uprościć proces importu samochodów, dlatego też towarzyszymy klientowi na każdym
-              etapie zakupu i transportu. Z naszą pomocą znajdziesz swój wymarzony samochód.</p>
+          <div class="col-12 col-lg-4 bc-import-step my-4">
+            <img src="../../assets/img/auction.jpg" />
+            <h4 class="mt-4 mb-2">Licytacja</h4>
+            <p>Następnie zostaniesz poinformowany o prognozowanych cenach oraz o szacowanych kosztach transakcji (zakupu
+              pojazdu wraz z importem pod wskazany adres). Większość samochodów w USA jest sprzedawana w formie
+              licytacji, dlatego od Ciebie będzie zależeć do jakiej kwoty dany samochód ma zostać licytowany.</p>
           </div>
-          <div class="col-md-12 col-xl-4">
-            <i class="fas fa-dollar-sign bc-icon bc-green-dark" aria-disabled="true"></i>
-            <h6 class="bc-subheader">Oszczędność</h6>
-            <p>Samochody importowane z USA mają atrakcyjną cenę w porównaniu z samochodami sporowadzanymi z Europy lub
-              zakupionymi na polskim rynku.</p>
+          <div class="col-12 col-lg-4 bc-import-step my-4">
+            <img src="../../assets/img/deal.jpg" />
+            <h4 class="mt-4 mb-2">Podpisanie umowy</h4>
+            <p>Ostatnim etapem jest podpisanie umowy pomiędzy stronami i wpłacenie kaucji na licytację w wysokości 10%
+              wartości samochodu. W razie wycofania się z zakupu przed rozpoczęciem licytacji, prowizja zostanie
+              zwrócona na Twoje konto. Kaucja jest wpłacana tylko raz, a nasza firma licytuje samochody aż do udanego
+              zakupu</p>
           </div>
         </div>
       </div>
-    </div>
+      <hr>
+      <div class="bc-after-auction">
+        <div class="card">
+          <div class="card-header">
+            <div class="bc-footer-card-header">
+              <h4 class="card-title">Po wygranej licytacji</h4>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>Po zakupie samochodu otrzymasz pełną fakturę amerykańskiego portalu aukcyjnego, którą należy opłacić w
+              przeciągu dwóch dni roboczych. W tym czasie nasza firma zajmie się wszystkimi formalnościami związanymi ze
+              sprowadzeniem samochodu do Polski (w tym transport z placu aukcyjnego do najbliższego portu, skąd samochód
+              zostanie wysłany do Holandi, Niemiec lub Polski).</p>
+            <p>Po dotarciu samochodu do jednego z europejskich portów, następuje kolejny etap – oclenie. Kwoty cła
+              różnią się w zależności od kraju, w którym znajduje się port (więcej informacji w zakładce <a
+                href="koszty-importu">Koszty
+                importu</a>). Otrzymasz fakturę i bezpośredni kontakt do agencji celnej, która będzie zajmować się Twoim
+              pojazdem.</p>
+            <p>Następnie samochód zostanie przywieziony na wskazany przez Ciebie adres. Opłatę ze transport samochodu
+              pod wskazany adres musisz uiścić we własnym zakresie, bezpośrednio firmie transportowej.</p>
+            <p>Nasza prowizja wynosi w każdym przypadku 3000 PLN.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
 
@@ -183,8 +197,6 @@
     </div>
   </footer>
 
-  <!-- Place for DOM manipulating scripts -->
-  <script src="src/js/header.js"></script>
 </body>
 
 </html>

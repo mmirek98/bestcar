@@ -11,6 +11,11 @@ html {
   background-image: linear-gradient(to right, #080C0D, #292724);
 }
 
+hr {
+  margin: 2vh auto;
+  width: 50%;
+}
+
 .content {
   margin-top: 200px;
 }

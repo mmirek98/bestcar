@@ -1,0 +1,45 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .9)), url('../assets/img/mustang_garage.jpg');
+  background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+  width: 80%;
+}
+
+.content a {
+  color: rgb(153, 0, 0);
+  font-weight: bold;
+}
+
+.bc-import-stepper {
+  padding-bottom: 8vh;
+}
+
+.bc-import-stepper img {
+  border: 2px solid #fff;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  width: 256px;
+}
+
+.bc-after-auction {
+  margin: auto;
+  padding: 8vh 0 12vh;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .bc-after-auction {
+    width: 80%;
+  }
+}
