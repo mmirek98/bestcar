@@ -31,7 +31,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -72,13 +72,14 @@
   </header>
 
   <div id="contactButtons">
-    <a href="https://m.me/61565074439530" target="_blank" aria-label="Napisz do nas przez Messenger"
-      class="bc-contact-ad-button bc-contact-ad-messenger" data-bs-toggle="tooltip" data-bs-placement="left"
-      title="Messenger">
+    <a href="https://m.me/61565074439530" id="contactMessengerButton" target="_blank"
+      aria-label="Napisz do nas przez Messenger" class="bc-contact-ad-button bc-contact-ad-messenger"
+      data-bs-toggle="tooltip" data-bs-placement="left" title="Messenger">
       <i aria-disabled="true" class="fa-brands fa-facebook-messenger"></i>
     </a>
-    <a href="tel:+48789794469" aria-label="Zadzwoń" class="bc-contact-ad-button bc-contact-ad-phone"
-      data-bs-toggle="tooltip" data-bs-placement="left" title="Zadzwoń">
+    <a href="tel:+48789794469" id="contactPhoneButton" aria-label="Zadzwoń"
+      class="bc-contact-ad-button bc-contact-ad-phone" data-bs-toggle="tooltip" data-bs-placement="left"
+      title="Zadzwoń">
       <i aria-disabled="true" class="fa-solid fa-phone"></i>
     </a>
   </div>
@@ -219,6 +220,8 @@
     </div>
   </footer>
 
+  <!-- attach Meta Custom events -->
+  <script src="../../js/metaPixel.js"></script>
 </body>
 
 </html>
