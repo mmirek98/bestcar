@@ -3,12 +3,12 @@ attachMetaEvents();
 function attachMetaEvents() {
   addMessengerButtonEvent();
   addPhoneButtonEvent();
+  addContactFormButton();
 }
  
 function addMessengerButtonEvent() {
   const MESSENGER_BUTTON_ID = 'contactMessengerButton';
   document.getElementById(MESSENGER_BUTTON_ID).addEventListener('click', () => {
-    console.log('tracking msg button, fbq=', fbq);
     fbq('trackCustom', 'MessengerButton');
   });
 }
@@ -16,7 +16,13 @@ function addMessengerButtonEvent() {
 function addPhoneButtonEvent() {
   const PHONE_BUTTON_ID = 'contactPhoneButton';
   document.getElementById(PHONE_BUTTON_ID).addEventListener('click', () => {
-    console.log('tracking call btn, fbq=', fbq);
     fbq('trackCustom', 'PhoneButton');
+  });
+}
+
+function addContactFormButton() {
+  const CONCACT_FORM_BUTTON = 'contactFormSubmitButton';
+  document.getElementById(CONCACT_FORM_BUTTON).addEventListener('click', () => {
+    fbq('trackCustom', 'ContactFormButton');
   });
 }

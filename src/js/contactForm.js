@@ -64,7 +64,6 @@ function enableSubmitButton() {
 
 function sendEmail() {
   const data = retrieveData();
-  console.log('trying to send email with data = ', data);
   Email.send({
     Host : "smtp.elasticemail.com",
     Username : "bc.smtp.proxy@gmail.com",
