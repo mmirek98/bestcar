@@ -54,13 +54,13 @@ hr {
 }
 
 .bc-contact-ad-phone {
-  bottom: 16%;
+  bottom: 14%;
   background-color: rgb(76, 175, 80);
 }
 
 @media (min-width: 576px) {
   .bc-contact-ad-phone {
-    bottom: 12%;
+    bottom: 14%;
   }
 }
 
