@@ -87,7 +87,7 @@ function sendEmail() {
         return;
       }
       console.error('Failed to send email: ', message);
-      fbq('trackCustom', 'FailedToSendEmail', { error: message });
+      fbq('trackCustom', 'FailedToSendEmail', { error: message, userData: data });
     }
   );
 }
