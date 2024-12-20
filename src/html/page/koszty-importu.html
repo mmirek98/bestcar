@@ -311,45 +311,58 @@
           </div>
         </div>
         <div class="col-12 col-lg-6 col-xxl-4">
-          <div class="card">
-            <div class="card-header">
-              <div class="bc-footer-card-header">
-                <h4 class="card-title">Formularz kontaktowy</h4>
-                <h5 class="card-subtitle">Zostaw swoje dane, a skontaktujemy się z Tobą w przeciągu 24 godzin</h5>
+          <div class="row bc-footer-messenger-container">
+            <button class="btn bc-messenger-btn">
+              <a href="https://m.me/61565074439530" id="contactMessengerButton" target="_blank"
+                aria-label="Napisz do nas przez Messenger" data-bs-toggle="tooltip" data-bs-placement="left"
+                title="Messenger">
+                <i aria-disabled="true" class="fa-brands fa-facebook-messenger"></i>
+                Napisz do nas na Messneger
+              </a>
+            </button>
+          </div>
+          <div class="row"><span>lub skontaktuj się przez poniższy formularz:</span></div>
+          <div class="row bc-footer-form-container">
+            <div class="card">
+              <div class="card-header">
+                <div class="bc-footer-card-header">
+                  <h4 class="card-title">Formularz kontaktowy</h4>
+                  <h5 class="card-subtitle">Zostaw swoje dane, a skontaktujemy się z Tobą w przeciągu 24 godzin</h5>
+                </div>
               </div>
-            </div>
-            <div class="card-body">
-              <form class="bc-footer-form">
-                <div class="form-group">
-                  <label for="name">Imię i nazwisko*</label>
-                  <input id="name" class="form-control" placeholder="Wpisz swoje imię i nazwisko..." type="text"
-                    maxlength="50" required oninput="validate()" />
-                </div>
-                <div class="form-group">
-                  <label for="email">Email*</label>
-                  <input id="email" class="form-control" placeholder="Wpisz swój adres email..." type="email"
-                    maxlength="70" required oninput="validate()" />
-                </div>
-                <div class="form-group">
-                  <label for="phone-number">Numer telefonu</label>
-                  <input id="phone-number" class="form-control" placeholder="+48" type="tel" maxlength="20" />
-                </div>
-                <div class="form-group">
-                  <label for="msg-topic">Temat</label>
-                  <input id="msg-topic" class="form-control" placeholder="Tytuł wiadomości" type="text"
-                    maxlength="50" />
-                </div>
-                <div class="form-group">
-                  <label for="msg">Wiadomość*</label>
-                  <textarea id="msg" class="form-control" rows="4" required maxlength="800" oninput="validate()"
-                    placeholder="Napisz jaka marka i model samochodu Cię interesuje. A może chcesz zapytać o szczegóły naszej oferty? Chętnie odpowiemy na Twoje pytania!"></textarea>
-                </div>
+              <div class="card-body">
+                <form class="bc-footer-form">
+                  <div class="form-group">
+                    <label for="name">Imię i nazwisko*</label>
+                    <input id="name" class="form-control" placeholder="Wpisz swoje imię i nazwisko..." type="text"
+                      maxlength="50" required oninput="validate()" />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input id="email" class="form-control" placeholder="Wpisz swój adres email..." type="email"
+                      maxlength="70" required oninput="validate()" />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone-number">Numer telefonu</label>
+                    <input id="phone-number" class="form-control" placeholder="+48" type="tel" maxlength="20" />
+                  </div>
+                  <div class="form-group">
+                    <label for="msg-topic">Temat</label>
+                    <input id="msg-topic" class="form-control" placeholder="Tytuł wiadomości" type="text"
+                      maxlength="50" />
+                  </div>
+                  <div class="form-group">
+                    <label for="msg">Wiadomość*</label>
+                    <textarea id="msg" class="form-control" rows="4" required maxlength="800" oninput="validate()"
+                      placeholder="Napisz jaka marka i model samochodu Cię interesuje. A może chcesz zapytać o szczegóły naszej oferty? Chętnie odpowiemy na Twoje pytania!"></textarea>
+                  </div>
 
-                <div class="d-flex flex-row-reverse pt-2">
-                  <button id="contactFormSubmitButton" type="submit" class="btn btn-secondary" disabled>Prośba o
-                    kontakt</button>
-                </div>
-              </form>
+                  <div class="d-flex flex-row-reverse pt-2">
+                    <button id="contactFormSubmitButton" type="submit" class="btn btn-secondary" disabled>Prośba o
+                      kontakt</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
