@@ -7,13 +7,13 @@ const MESSAGE_TOPIC_INPUT_ID = 'msg-topic';
 const ENABLED_SUBMIT_BTN_CLASS = 'btn-primary';
 const DISABLED_SUBMIT_BTN_CLASS = 'btn-secodnary';
 
-setTimeout(() => {
+window.addEventListener('load', () => {
   const submit = document.getElementById(CONTACT_FORM_SUBMIT_BUTTON_ID);
   submit.addEventListener('click', (event) => {
     event.preventDefault();
     sendEmail();
   });
-}, 1000);
+});
 
 
 function validate() {
@@ -87,7 +87,7 @@ function sendEmail() {
         return;
       }
       console.error('Failed to send email: ', message);
-      fbq('trackCustom', 'FailedToSendEmail', { error: message, userData: data });
+      fbq('trackCustom', 'FailedToSendEmail', { content_type: JSON.stringify(message), content_name: JSON.stringify(data) });
     }
   );
 }
