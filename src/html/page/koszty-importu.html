@@ -333,9 +333,9 @@
               <div class="card-body">
                 <form class="bc-footer-form">
                   <div class="form-group">
-                    <label for="name">Imię i nazwisko*</label>
-                    <input id="name" class="form-control" placeholder="Wpisz swoje imię i nazwisko..." type="text"
-                      maxlength="50" required oninput="validate()" />
+                    <label for="name">Imię*</label>
+                    <input id="name" class="form-control" placeholder="Wpisz swoje imię..." type="text" maxlength="50"
+                      required oninput="validate()" />
                   </div>
                   <div class="form-group">
                     <label for="email">Email*</label>
@@ -373,6 +373,57 @@
 
   <!-- attach Meta Custom events -->
   <script src="../../js/metaPixel.js"></script>
+  <!-- Firebase -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBiGSslkxpaiZ1AxBlP6UwxkhLV-K_EZ3o",
+      authDomain: "best-car-1581e.firebaseapp.com",
+      databaseURL: "https://best-car-1581e-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "best-car-1581e",
+      storageBucket: "best-car-1581e.firebasestorage.app",
+      messagingSenderId: "553832738147",
+      appId: "1:553832738147:web:33983dad19a355d82bf756"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    import { getDatabase, set, ref } from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js'
+
+
+    window.addEventListener('load', () => {
+      const submit = document.getElementById(CONTACT_FORM_SUBMIT_BUTTON_ID);
+      submit.addEventListener('click', (event) => {
+        event.preventDefault();
+        sendToFirebase();
+      });
+    });
+
+    function sendToFirebase() {
+      const data = retrieveData();
+      const db = getDatabase();
+      const date = getDate();
+      set(ref(db, "Lead/" + date), {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        topic: data.topic,
+        message: data.message
+      }).then(() => {
+        alert('Dziękujemy za kontakt. Skontaktujemy się z Tobą w przeciągu 24 godzin!')
+        return;
+      }).catch(error => {
+        console.error('Failed to send email: ', error);
+        alert('failed ', + error);
+      });
+    }
+  </script>
 </body>
 
 </html>

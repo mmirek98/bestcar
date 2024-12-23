@@ -1,3 +1,5 @@
+// import { getDatabase, set, ref } from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js'
+
 const CONTACT_FORM_SUBMIT_BUTTON_ID = 'contactFormSubmitButton';
 const NAME_INPUT_ID = 'name';
 const EMAIL_INPUT_ID = 'email';
@@ -15,6 +17,21 @@ window.addEventListener('load', () => {
   });
 });
 
+function getDate() {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  let mm = today.getMonth() + 1;
+  let dd = today.getDate();
+  const hours = today.getHours();
+  const minutes = today.getMinutes();
+  const seconds = today.getSeconds();
+
+
+  if (dd < 10) dd = '0' + dd;
+  if (mm < 10) mm = '0' + mm;
+
+  return yyyy + '-' + mm + '-' + dd + '--' + hours + ':' + minutes + ':' + seconds;
+}
 
 function validate() {
   const areFieldsCorrect = [validateName(), validateEmail(), validateMessage()]
@@ -73,7 +90,7 @@ function sendEmail() {
     Subject : `[Formularz kontaktowy] ${data.topic}`,
     Body : `<div style="background-color: #292724; color: #FC0; padding: 20px; margin-bottom: 20px;">
       <div><span>Email kontaktowy: ${data.email},</span></div>
-      <div><span>Imię i nazwisko: ${data.name},</span></div>
+      <div><span>Imię: ${data.name},</span></div>
       <div><span>Nr telefonu (+48): ${data.phone},</span></div>
     </div>
     <div>Treść wiadomości:</div>
@@ -83,7 +100,6 @@ function sendEmail() {
     message => {
       if (message === 'OK') {
         console.log('Send email successfuly');
-        alert('Dziękujemy za kontakt. Skontaktujemy się z Tobą w przeciągu 24 godzin!')
         return;
       }
       console.error('Failed to send email: ', message);
